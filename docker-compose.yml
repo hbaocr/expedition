@@ -1,0 +1,23 @@
+version: "3.6"
+services:
+  boot_node:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile-patch-defaultnetwork
+      args:
+        - CHAIN_NAME="Rmit Chain"
+        - CHAIN_TYPE="private"
+        - NODE_RPC_URL="http://data-node.rmit-demo.online:9545"
+    ports:
+      - 3000:3000 # expose tcp by default
+    ulimits:
+      nofile:
+        soft: 2048
+        hard: 4096
+
+   # environment:
+      #P2PPORT: ${P2P_PORT}
+    volumes:
+        - ./nginx.conf:/etc/nginx/nginx.conf #Add a volume to mount nginx.conf file to the container to replace the default file with the one created.
+    restart: unless-stopped
+
