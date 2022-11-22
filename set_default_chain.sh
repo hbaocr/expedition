@@ -20,6 +20,11 @@ export default function() {
       name: chain_name,
       network: chain_type,
       rpc: [chain_rpc],
+    },
+     {
+      name: "localRMIT",
+      network: "local",
+      rpc: ["http://127.0.0.1:9545"],
     }
   ]);
   return [chains, setChains];
