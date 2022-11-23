@@ -102,3 +102,18 @@ Apache License 2.0
 
 ---
 *This repo originally forked from [ETCDEVTeam/emerald-explorer](https://github.com/ETCDEVTeam/emerald-explorer).*
+
+##
+Build docker and push docker hub
+
+```sh
+#build
+docker compose -f ./docker-compose.yml build
+#tag with the tag name on docker hub
+docker tag expedition-boot_node duonghuynhbaocr/expedition-local-nginx:0.0.2
+
+# push to docker hub
+docker push duonghuynhbaocr/expedition-local-nginx:0.0.2
+
+```
+
