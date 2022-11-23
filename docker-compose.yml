@@ -1,6 +1,6 @@
 version: "3.6"
 services:
-  boot_node:
+  expedition-nginx:
     build:
       context: ./
       dockerfile: ./Dockerfile-patch-defaultnetwork
