@@ -17,9 +17,14 @@ const chain_rpc=$NODE_RPC_URL
 export default function() {
   const [chains, setChains] = React.useState<Chain[]>([
     {
-      name: "RMIT Lab Coin",
+      name: "localRMIT",
       network: "local",
       rpc: ["http://127.0.0.1:9545"],
+    },
+    {
+      name: chain_name,
+      network: chain_type,
+      rpc: [chain_rpc],
     }
   ]);
   return [chains, setChains];
