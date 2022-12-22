@@ -2,7 +2,7 @@ version: "3.6"
 services:
   expedition:
     container_name: expedition_container
-    image: duonghuynhbaocr/expedition-local-nginx:0.0.3
+    image: duonghuynhbaocr/expedition-local-nginx:0.0.4
     ports:
       - 3000:3000 # expose tcp by default
     ulimits:
